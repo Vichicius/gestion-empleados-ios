@@ -13,6 +13,7 @@
 		0DFB5EFD2769F80A00397C31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DFB5EFB2769F80A00397C31 /* Main.storyboard */; };
 		0DFB5EFF2769F80B00397C31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DFB5EFE2769F80B00397C31 /* Assets.xcassets */; };
 		0DFB5F022769F80B00397C31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DFB5F002769F80B00397C31 /* LaunchScreen.storyboard */; };
+		0DFB5F0C2769F8C000397C31 /* EmpleadoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFB5F0B2769F8C000397C31 /* EmpleadoTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		0DFB5EFE2769F80B00397C31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0DFB5F012769F80B00397C31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0DFB5F032769F80B00397C31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DFB5F0B2769F8C000397C31 /* EmpleadoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmpleadoTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				0DFB5EFE2769F80B00397C31 /* Assets.xcassets */,
 				0DFB5F002769F80B00397C31 /* LaunchScreen.storyboard */,
 				0DFB5F032769F80B00397C31 /* Info.plist */,
+				0DFB5F0B2769F8C000397C31 /* EmpleadoTableViewCell.swift */,
 			);
 			path = "gestion-empleados-ios";
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DFB5F0C2769F8C000397C31 /* EmpleadoTableViewCell.swift in Sources */,
 				0DFB5EFA2769F80A00397C31 /* ViewController.swift in Sources */,
 				0DFB5EF62769F80A00397C31 /* AppDelegate.swift in Sources */,
 				0DFB5EF82769F80A00397C31 /* SceneDelegate.swift in Sources */,
