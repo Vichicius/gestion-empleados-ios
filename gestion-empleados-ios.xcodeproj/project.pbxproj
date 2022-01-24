@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D207667279EA7C900E43DE4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D207666279EA7C900E43DE4 /* RegisterViewController.swift */; };
 		0DFB5EF62769F80A00397C31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFB5EF52769F80A00397C31 /* AppDelegate.swift */; };
 		0DFB5EF82769F80A00397C31 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFB5EF72769F80A00397C31 /* SceneDelegate.swift */; };
 		0DFB5EFA2769F80A00397C31 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFB5EF92769F80A00397C31 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D207666279EA7C900E43DE4 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		0DFB5EF22769F80A00397C31 /* gestion-empleados-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gestion-empleados-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DFB5EF52769F80A00397C31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DFB5EF72769F80A00397C31 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				0DFB5F002769F80B00397C31 /* LaunchScreen.storyboard */,
 				0DFB5F032769F80B00397C31 /* Info.plist */,
 				0DFB5F0B2769F8C000397C31 /* EmpleadoTableViewCell.swift */,
+				0D207666279EA7C900E43DE4 /* RegisterViewController.swift */,
 			);
 			path = "gestion-empleados-ios";
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DFB5F0C2769F8C000397C31 /* EmpleadoTableViewCell.swift in Sources */,
+				0D207667279EA7C900E43DE4 /* RegisterViewController.swift in Sources */,
 				0DFB5EFA2769F80A00397C31 /* ViewController.swift in Sources */,
 				0DFB5EF62769F80A00397C31 /* AppDelegate.swift in Sources */,
 				0DFB5EF82769F80A00397C31 /* SceneDelegate.swift in Sources */,

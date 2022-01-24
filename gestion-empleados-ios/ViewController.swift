@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController/*, UITableViewDataSource, UITableViewDelegate*/ {
     
     
     var url = URL(string:"http://192.168.64.3/proyectos/gestion-empleados/public/api/users/forgot-password")
@@ -23,7 +23,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return 2 //aqui devolver la consulta de la api
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    /*func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         <#code#>
     }
     
@@ -32,6 +32,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     func login(){
         
-    }
+    }*/
 }
 
