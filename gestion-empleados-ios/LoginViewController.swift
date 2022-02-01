@@ -49,6 +49,7 @@ class LoginViewController: ViewController {
         //performSegue(withIdentifier: "logueado", sender: nil)
     }
     
+    //func prepare for segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "logueado_lista"{
