@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Lista View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="gestion_empleados_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ListaViewController" customModule="gestion_empleados_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -220,7 +220,8 @@
                     <connections>
                         <outlet property="email" destination="ziA-AP-Hv6" id="c2T-B0-ypc"/>
                         <outlet property="password" destination="R6V-f8-qTO" id="WBj-XW-igO"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="logueado" destinationCreationSelector="segueee:" id="OzX-l0-NTZ"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="logueado_lista" destinationCreationSelector="seguelista:" id="OzX-l0-NTZ"/>
+                        <segue destination="rSU-nB-QhH" kind="show" identifier="logueado_perfil" id="WKw-Ne-Zxg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UyZ-RJ-Iz6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -345,10 +346,10 @@
             </objects>
             <point key="canvasLocation" x="-1614" y="-208"/>
         </scene>
-        <!--Register View Controller-->
+        <!--Recuperacion View Controller-->
         <scene sceneID="MH6-rb-PWI">
             <objects>
-                <viewController id="2fo-mx-yzZ" customClass="RegisterViewController" customModule="gestion_empleados_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2fo-mx-yzZ" customClass="RecuperacionViewController" customModule="gestion_empleados_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YiI-wU-niv">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -397,7 +398,7 @@
         <!--Detalle del empleado-->
         <scene sceneID="SlY-DF-K2o">
             <objects>
-                <viewController title="Detalle del empleado" id="rSU-nB-QhH" customClass="RegisterViewController" customModule="gestion_empleados_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Detalle del empleado" id="rSU-nB-QhH" customClass="PerfilViewController" customModule="gestion_empleados_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aKP-mU-P7T">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -544,9 +545,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QFD-kC-6pe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="521.53846153846155" y="86.729857819905206"/>
+            <point key="canvasLocation" x="455" y="306"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="WKw-Ne-Zxg"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -12,7 +12,13 @@ import Alamofire
 
 
 class LoginViewController: ViewController {
-
+    
+    struct Data: Codable {
+        let api_token: String
+        let rol: String
+    }
+    var api_token:String = ""
+    var rol:String?
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
     
@@ -25,24 +31,36 @@ class LoginViewController: ViewController {
     
     @IBAction func loginBotonPulsado(_ sender: Any) {
         //email.text
-        var url = "https://private-088c5a-usuarios4.apiary-mock.com/users"
-
-        AF.request(url).responseJSON {
-            response in
-            if let json = respuesta.result.value {
-                var users: [User] = []
-                for user in json as! [[String : Any]] {
-                    users.append(User(json: user))
-                }
-            }
+        let url = "http://localhost/proyectos/gestion-empleados/public/api/users/login"
+        let body = ["email": email.text, "password": password.text]
+        
+        AF.request(url, method: .put, parameters: body, encoding: JSONEncoding.default, headers: nil).responseDecodable(of: Data.self){response in
+            self.api_token = response.value!.api_token
+            self.rol = response.value!.rol
         }
-        performSegue(withIdentifier: "logueado", sender: nil)
+        print(api_token)
+        if rol == "empleado"{
+            performSegue(withIdentifier: "logueado_perfil", sender: nil)
+        }else{
+            performSegue(withIdentifier: "logueado_lista", sender: nil)
+        }
+        print(api_token)
+        
+        //performSegue(withIdentifier: "logueado", sender: nil)
     }
     
-    
-    @IBSegueAction func segueee(_ coder: NSCoder) -> ViewController? {
-        return <#ViewController(coder: coder)#>
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "logueado_lista"{
+            let listaVista = segue.destination as! ListaViewController
+            listaVista.api_token = api_token
+        }
+        if segue.identifier == "logueado_perfil"{
+            let listaPerfil = segue.destination as! PerfilViewController
+            listaPerfil.api_token = api_token
+        }
     }
+    
     /*
     // MARK: - Navigation
 

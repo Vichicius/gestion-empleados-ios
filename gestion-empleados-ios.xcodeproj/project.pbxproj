@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0D207667279EA7C900E43DE4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D207666279EA7C900E43DE4 /* RegisterViewController.swift */; };
+		0D5F5BEA27A9423500197736 /* ListaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5F5BE927A9423500197736 /* ListaViewController.swift */; };
+		0D5F5BEC27A942DA00197736 /* RecuperacionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5F5BEB27A942DA00197736 /* RecuperacionViewController.swift */; };
+		0D5F5BEE27A942EB00197736 /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5F5BED27A942EB00197736 /* PerfilViewController.swift */; };
 		0DF7900527A1739400BA36A2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF7900427A1739400BA36A2 /* LoginViewController.swift */; };
 		0DF7900827A17C3A00BA36A2 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0DF7900727A17C3A00BA36A2 /* Alamofire */; };
 		0DFB5EF62769F80A00397C31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFB5EF52769F80A00397C31 /* AppDelegate.swift */; };
@@ -21,6 +24,9 @@
 
 /* Begin PBXFileReference section */
 		0D207666279EA7C900E43DE4 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		0D5F5BE927A9423500197736 /* ListaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaViewController.swift; sourceTree = "<group>"; };
+		0D5F5BEB27A942DA00197736 /* RecuperacionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecuperacionViewController.swift; sourceTree = "<group>"; };
+		0D5F5BED27A942EB00197736 /* PerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilViewController.swift; sourceTree = "<group>"; };
 		0DF7900427A1739400BA36A2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0DFB5EF22769F80A00397C31 /* gestion-empleados-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gestion-empleados-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DFB5EF52769F80A00397C31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +80,9 @@
 				0DFB5F0B2769F8C000397C31 /* EmpleadoTableViewCell.swift */,
 				0D207666279EA7C900E43DE4 /* RegisterViewController.swift */,
 				0DF7900427A1739400BA36A2 /* LoginViewController.swift */,
+				0D5F5BE927A9423500197736 /* ListaViewController.swift */,
+				0D5F5BEB27A942DA00197736 /* RecuperacionViewController.swift */,
+				0D5F5BED27A942EB00197736 /* PerfilViewController.swift */,
 			);
 			path = "gestion-empleados-ios";
 			sourceTree = "<group>";
@@ -157,8 +166,11 @@
 				0DF7900527A1739400BA36A2 /* LoginViewController.swift in Sources */,
 				0DFB5F0C2769F8C000397C31 /* EmpleadoTableViewCell.swift in Sources */,
 				0D207667279EA7C900E43DE4 /* RegisterViewController.swift in Sources */,
+				0D5F5BEE27A942EB00197736 /* PerfilViewController.swift in Sources */,
 				0DFB5EFA2769F80A00397C31 /* ViewController.swift in Sources */,
+				0D5F5BEC27A942DA00197736 /* RecuperacionViewController.swift in Sources */,
 				0DFB5EF62769F80A00397C31 /* AppDelegate.swift in Sources */,
+				0D5F5BEA27A9423500197736 /* ListaViewController.swift in Sources */,
 				0DFB5EF82769F80A00397C31 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

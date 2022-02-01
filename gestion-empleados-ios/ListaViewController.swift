@@ -1,21 +1,20 @@
 //
-//  RegisterViewController.swift
+//  ListaViewController.swift
 //  gestion-empleados-ios
 //
-//  Created by APPS2M on 24/1/22.
+//  Created by APPS2M on 1/2/22.
 //
 
 import UIKit
 
-class RegisterViewController: ViewController {
+class ListaViewController: ViewController {
 
- 
+    var api_token:String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-        
     }
     
 
