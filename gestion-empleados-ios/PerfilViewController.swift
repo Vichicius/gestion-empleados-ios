@@ -9,7 +9,8 @@ import UIKit
 
 class PerfilViewController: ViewController {
 
-    var api_token:String = ""
+    var api_token:String? = ""
+    var rol:String? = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()

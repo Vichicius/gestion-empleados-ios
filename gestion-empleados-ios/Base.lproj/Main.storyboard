@@ -113,7 +113,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-540" y="87"/>
+            <point key="canvasLocation" x="-591" y="87"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XIg-vO-8SI">
@@ -153,7 +153,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="admin" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R6V-f8-qTO">
                                 <rect key="frame" x="78" y="336.66666666666669" width="234" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AUX-c9-NGD">
                                 <rect key="frame" x="79" y="307.66666666666669" width="88" height="21"/>
@@ -182,13 +182,19 @@
                                 <rect key="frame" x="79" y="378.66666666666669" width="178" height="30"/>
                                 <state key="normal" title="He olvidado la contraseña"/>
                                 <connections>
-                                    <segue destination="2fo-mx-yzZ" kind="show" id="YoW-nU-xL8"/>
+                                    <segue destination="2fo-mx-yzZ" kind="show" identifier="recuperacion" id="YoW-nU-xL8"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82J-D8-BEI">
                                 <rect key="frame" x="79" y="218.66666666666666" width="41" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email o contraseña incorrecta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dM2-yx-xN8">
+                                <rect key="frame" x="79" y="291" width="144" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -199,6 +205,7 @@
                             <constraint firstItem="eHi-6N-FrV" firstAttribute="trailing" secondItem="ziA-AP-Hv6" secondAttribute="trailing" id="9oi-Oe-vhS"/>
                             <constraint firstItem="ziA-AP-Hv6" firstAttribute="leading" secondItem="dFX-CH-M29" secondAttribute="trailing" multiplier="0.2" constant="1" id="AiT-5T-Cn8"/>
                             <constraint firstItem="ziA-AP-Hv6" firstAttribute="trailing" secondItem="dFX-CH-M29" secondAttribute="trailing" multiplier="0.8" id="BtB-AB-Mur"/>
+                            <constraint firstItem="AUX-c9-NGD" firstAttribute="top" secondItem="dM2-yx-xN8" secondAttribute="bottom" constant="4.6699999999999999" id="Ezx-2H-hkn"/>
                             <constraint firstItem="dFX-CH-M29" firstAttribute="top" secondItem="N1d-HZ-uA7" secondAttribute="top" multiplier="0.7" id="Go9-1c-01Y"/>
                             <constraint firstItem="R6V-f8-qTO" firstAttribute="leading" secondItem="dFX-CH-M29" secondAttribute="trailing" multiplier="0.2" id="Kus-LH-uib"/>
                             <constraint firstItem="ziA-AP-Hv6" firstAttribute="top" secondItem="82J-D8-BEI" secondAttribute="bottom" constant="11" id="L0l-Qq-Uuy"/>
@@ -208,9 +215,11 @@
                             <constraint firstItem="R6V-f8-qTO" firstAttribute="trailing" secondItem="dFX-CH-M29" secondAttribute="trailing" multiplier="0.8" id="Ybq-1M-3Pq"/>
                             <constraint firstItem="AUX-c9-NGD" firstAttribute="top" secondItem="ziA-AP-Hv6" secondAttribute="bottom" constant="23" id="acA-XA-YTq"/>
                             <constraint firstItem="AUX-c9-NGD" firstAttribute="leading" secondItem="ziA-AP-Hv6" secondAttribute="leading" id="d52-Rq-Hb6"/>
+                            <constraint firstItem="dM2-yx-xN8" firstAttribute="top" secondItem="ziA-AP-Hv6" secondAttribute="bottom" constant="6.3300000000000001" id="ddM-Gu-Aaf"/>
                             <constraint firstItem="82J-D8-BEI" firstAttribute="leading" secondItem="ziA-AP-Hv6" secondAttribute="leading" id="eC1-eZ-hqG"/>
                             <constraint firstItem="LMO-2T-YT1" firstAttribute="leading" secondItem="R6V-f8-qTO" secondAttribute="leading" id="eKl-YB-6e1"/>
                             <constraint firstItem="ziA-AP-Hv6" firstAttribute="top" secondItem="N1d-HZ-uA7" secondAttribute="bottom" constant="77" id="f22-NV-nPd"/>
+                            <constraint firstItem="dM2-yx-xN8" firstAttribute="leading" secondItem="82J-D8-BEI" secondAttribute="leading" id="hde-eO-dVB"/>
                             <constraint firstItem="nlz-g3-FVW" firstAttribute="leading" secondItem="ziA-AP-Hv6" secondAttribute="leading" id="kXl-Tx-50r"/>
                             <constraint firstItem="nlz-g3-FVW" firstAttribute="top" secondItem="R6V-f8-qTO" secondAttribute="bottom" constant="8" id="qgJ-TB-drL"/>
                             <constraint firstItem="82J-D8-BEI" firstAttribute="top" secondItem="N1d-HZ-uA7" secondAttribute="bottom" constant="45" id="yba-vV-GaY"/>
@@ -219,6 +228,7 @@
                     <navigationItem key="navigationItem" id="CIC-ci-Iyb"/>
                     <connections>
                         <outlet property="email" destination="ziA-AP-Hv6" id="c2T-B0-ypc"/>
+                        <outlet property="errormsg" destination="dM2-yx-xN8" id="TYh-Q6-M37"/>
                         <outlet property="password" destination="R6V-f8-qTO" id="WBj-XW-igO"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="logueado_lista" destinationCreationSelector="seguelista:" id="OzX-l0-NTZ"/>
                         <segue destination="rSU-nB-QhH" kind="show" identifier="logueado_perfil" id="WKw-Ne-Zxg"/>
@@ -257,8 +267,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repetir contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0i-Aa-Q14">
-                                <rect key="frame" x="79" y="247.66666666666663" width="144" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0i-Aa-Q14">
+                                <rect key="frame" x="79" y="247.66666666666663" width="62" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -302,6 +312,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BIs-Ec-37q">
                                 <rect key="frame" x="79" y="528.66666666666663" width="233" height="30"/>
                                 <state key="normal" title="Completar"/>
+                                <connections>
+                                    <action selector="registrarse:" destination="0TR-qc-4yA" eventType="touchUpInside" id="XZM-W2-OZR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4tY-B8-pnV"/>
@@ -341,10 +354,20 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ahy-Jr-XIg"/>
+                    <connections>
+                        <outlet property="inputBio" destination="8pk-Pd-SO3" id="Qfg-OO-3VC"/>
+                        <outlet property="inputContra" destination="1LT-bk-an4" id="VxD-Jy-cdK"/>
+                        <outlet property="inputEmail" destination="3rU-mV-Y0r" id="dCf-EK-PR2"/>
+                        <outlet property="inputNombre" destination="cA6-q9-MQx" id="esp-iW-r6O"/>
+                        <outlet property="inputSalario" destination="j0c-Oj-RwG" id="dw2-Xb-5gB"/>
+                        <outlet property="puesto" destination="Tbg-G3-yDu" id="dGN-tt-eKI"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="registro_lista" id="NzJ-j1-gTe"/>
+                        <segue destination="rSU-nB-QhH" kind="show" identifier="registro_perfil" id="d7Z-m0-SUU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DLS-HQ-eTW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1614" y="-208"/>
+            <point key="canvasLocation" x="-1531" y="-206"/>
         </scene>
         <!--Recuperacion View Controller-->
         <scene sceneID="MH6-rb-PWI">
@@ -365,14 +388,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hfc-uK-iMs">
-                                <rect key="frame" x="186" y="407" width="42" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hfc-uK-iMs">
+                                <rect key="frame" x="174" y="383.33333333333331" width="42" height="30"/>
                                 <state key="normal" title="Enviar"/>
+                                <connections>
+                                    <action selector="recuperarContra:" destination="2fo-mx-yzZ" eventType="touchUpInside" id="pal-VB-iPD"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recuperación" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bey-ad-rtt">
                                 <rect key="frame" x="142.66666666666666" y="233.33333333333334" width="105" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mensaje de estado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="paq-7E-p34">
+                                <rect key="frame" x="138" y="453.33333333333331" width="114.33333333333331" height="15.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -382,14 +413,22 @@
                         <constraints>
                             <constraint firstItem="F6R-1s-zJ5" firstAttribute="top" secondItem="bey-ad-rtt" secondAttribute="bottom" constant="65" id="JHq-aO-MwY"/>
                             <constraint firstItem="F6R-1s-zJ5" firstAttribute="leading" secondItem="yaK-Kt-PJa" secondAttribute="trailing" multiplier="0.2" constant="1" id="T6w-eb-IBj"/>
+                            <constraint firstItem="paq-7E-p34" firstAttribute="centerX" secondItem="YiI-wU-niv" secondAttribute="centerX" id="ULV-JW-ltZ"/>
+                            <constraint firstItem="Hfc-uK-iMs" firstAttribute="centerX" secondItem="YiI-wU-niv" secondAttribute="centerX" id="XMi-a4-6de"/>
                             <constraint firstItem="bey-ad-rtt" firstAttribute="centerX" secondItem="YiI-wU-niv" secondAttribute="centerX" id="YzN-tU-LmD"/>
                             <constraint firstItem="yaK-Kt-PJa" firstAttribute="top" secondItem="bbr-Vb-K4n" secondAttribute="top" multiplier="0.3" id="flc-gD-VfE"/>
+                            <constraint firstItem="paq-7E-p34" firstAttribute="top" secondItem="Hfc-uK-iMs" secondAttribute="bottom" constant="40" id="ga0-Jx-ENB"/>
                             <constraint firstItem="F6R-1s-zJ5" firstAttribute="top" secondItem="bbr-Vb-K4n" secondAttribute="bottom" constant="5" id="jcm-t4-dwD"/>
                             <constraint firstItem="bbr-Vb-K4n" firstAttribute="leading" secondItem="F6R-1s-zJ5" secondAttribute="leading" id="lOQ-mN-TEu"/>
+                            <constraint firstItem="Hfc-uK-iMs" firstAttribute="top" secondItem="F6R-1s-zJ5" secondAttribute="bottom" constant="30" id="v2k-AC-Trt"/>
                             <constraint firstItem="F6R-1s-zJ5" firstAttribute="trailing" secondItem="yaK-Kt-PJa" secondAttribute="trailing" multiplier="0.8" id="xiC-5n-Fp8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Dpi-hF-Fuy"/>
+                    <connections>
+                        <outlet property="inputEmail" destination="F6R-1s-zJ5" id="HvY-OE-63Q"/>
+                        <outlet property="output" destination="paq-7E-p34" id="X82-XI-8xq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sH3-1c-gXM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -549,11 +588,15 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="WKw-Ne-Zxg"/>
+        <segue reference="d7Z-m0-SUU"/>
+        <segue reference="NzJ-j1-gTe"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
