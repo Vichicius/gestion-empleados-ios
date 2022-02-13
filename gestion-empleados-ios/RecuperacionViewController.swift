@@ -15,6 +15,7 @@ class RecuperacionViewController: ViewController {
     }
     var status:Int?
     var pass:String?
+    @IBOutlet weak var outputMSG: UILabel!
     @IBOutlet weak var inputEmail: UITextField!
     @IBOutlet weak var output: UILabel!
     
@@ -25,7 +26,7 @@ class RecuperacionViewController: ViewController {
     }
     
     @IBAction func recuperarContra(_ sender: Any) {
-        let url = "http://192.168.64.3/proyectos/gestion-empleados/public/api/forgot-password"
+        let url = "http://localhost:8888/gestion-empleados/public/api/forgot-password"
         let body = ["email": inputEmail.text]
         
         AF.request(url, method: .put, parameters: body, encoding: JSONEncoding.default, headers: nil).responseDecodable(of: Data.self){response in
@@ -33,14 +34,14 @@ class RecuperacionViewController: ViewController {
             self.status = response.value?.status
             self.pass = response.value?.password
                         
-            print("EL STATUS",self.status!)
+            print("EL STATUS",self.status)
             self.afterResponse()
         }
     }
     func afterResponse(){
         output.isHidden = false
-        print(status!)
-        if status! == 1{
+        print(status)
+        if status == 1{
             output.text = "Contraseña restablecida: \(self.pass!)"
         }else{
             output.text = "Ese email no está registrado"

@@ -11,9 +11,12 @@ class ListaViewController: ViewController {
 
     var api_token:String? = ""
     var rol:String? = ""
+    var id:Int? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("entra a la lista")
+        print(rol)
     }
     
 
