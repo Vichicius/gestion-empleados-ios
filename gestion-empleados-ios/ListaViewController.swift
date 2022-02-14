@@ -15,19 +15,25 @@ class ListaViewController: ViewController {
     var id:Int? = nil
     
     struct DataResponse: Decodable{
-        let id: Int?
-        let nombre: String?
-        let email: String?
-        let puesto: String?
-        let biografia: String?
-        let salario: Int?
+        struct Usuario {
+            let id: Int?
+            let nombre: String?
+            let email: String?
+            let puesto: String?
+            let biografia: String?
+            let salario: Int?
+        }
     }
-    var id2: Int?
-    var nombre: String?
-    var email: String?
-    var puesto: String?
-    var biografia: String?
-    var salario: Int?
+    
+    var user: Usuario = []
+    struct Usuario {
+        var id: Int?
+        var nombre: String?
+        var email: String?
+        var puesto: String?
+        var biografia: String?
+        var salario: Int?
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
