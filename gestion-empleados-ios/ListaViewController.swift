@@ -20,20 +20,11 @@ class ListaViewController: ViewController {
         let puesto: String?
         let salario: Int?
     }
-    
-    struct Data: Encodable, Decodable{
-        var usuario: [Usuario]?
+
+    struct UsuarioR: Encodable, Decodable{
+        var usuarios: [Usuario]?
     }
-    
-//    var user: [Usuario] = []
-//    struct Usuario {
-//        var id: Int?
-//        var nombre: String?
-//        var email: String?
-//        var puesto: String?
-//        var biografia: String?
-//        var salario: Int?
-//    }
+    var usuarios: [Usuario]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,11 +35,28 @@ class ListaViewController: ViewController {
         let body = ["api_token": api_token]
         
         //AF.req encoding
-        AF.request(url, method: .put, parameters: body, encoding: JSONEncoding.default, headers: nil).responseDecodable(of: Data.self){response in
-            if let usuarios = response.value?.usuario{
-                success(usuarios)
-            }
+        AF.request(url, method: .put, parameters: body, encoding: JSONEncoding.default, headers: nil).responseDecodable(of: UsuarioR.self){response in
+            print(response)
+            self.usuarios = response.value?.usuarios
+            print(self.usuarios)
         }
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return usuarios?.count ?? 0
+    }
+        
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let celda = tableView.dequeueReusableCell(withIdentifier: "celdaID", for: indexPath) as! EmpleadoTableViewCell
+        celda.NombreTXT.text = self.usuarios![indexPath.row].nombre!
+        celda.PuestoTXT.text = self.usuarios![indexPath.row].puesto!
+        celda.SalarioTXT.text = String(self.usuarios![indexPath.row].salario!)
+
+        return celda
+        }
+        
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //segue a perfil
     }
     
 

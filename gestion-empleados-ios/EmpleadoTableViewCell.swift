@@ -9,6 +9,11 @@ import UIKit
 
 class EmpleadoTableViewCell: UITableViewCell {
 
+    var usuario: Usuario? {
+        didSet{
+            actualizarCampos()
+        }
+    }
     
     @IBOutlet weak var NombreTXT: UILabel!
     @IBOutlet weak var PuestoTXT: UILabel!
@@ -23,6 +28,12 @@ class EmpleadoTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func actualizarCampos(){
+        NombreTXT.text = usuario!.nombre
+        PuestoTXT.text = usuario!.puesto
+        SalarioTXT.text = String(usuario!.salario!)
     }
 
 }
