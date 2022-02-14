@@ -38,6 +38,10 @@ class PerfilViewController: ViewController {
     var biografia: String?
     var salario: Int?
     
+    @IBOutlet weak var nombreTXT: UILabel!
+    @IBOutlet weak var puestoTXT: UILabel!
+    @IBOutlet weak var salarioTXT: UILabel!
+    @IBOutlet weak var biografiaTXT: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,5 +73,9 @@ class PerfilViewController: ViewController {
 
     func afterResponse(){
         print("id", id,"id2",id2, "nombre",nombre, "email",email, "puesto",puesto, "biografia",biografia, "salario", salario)
+        nombreTXT.text = nombre!
+        puestoTXT.text = puesto!
+        salarioTXT.text = String(salario!)
+        biografiaTXT.text = biografia!
     }
 }
