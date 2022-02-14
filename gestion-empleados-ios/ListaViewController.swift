@@ -42,7 +42,7 @@ class ListaViewController: ViewController {
         }
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return usuarios?.count ?? 0
     }
         
@@ -58,6 +58,15 @@ class ListaViewController: ViewController {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //segue a perfil
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        if segue.identifier == "logueado_perfil"{
+            let listaPerfil = segue.destination as! PerfilViewController
+            listaPerfil.api_token = api_token!
+            listaPerfil.rol = rol!
+            listaPerfil.id = id!
+        }
+    }
+
 
 }
