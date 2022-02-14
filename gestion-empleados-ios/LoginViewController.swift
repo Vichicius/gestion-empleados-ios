@@ -36,7 +36,7 @@ class LoginViewController: ViewController {
     
     @IBAction func loginBotonPulsado(_ sender: Any) {
         //email.text
-        let url = "http://localhost:8888/gestion-empleados/public/api/login"
+        let url = "http://192.168.64.3/proyectos/gestion-empleados/public/api/login"
         let body = ["email": email.text, "password": password.text]
         
         //AF.req encoding

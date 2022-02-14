@@ -42,17 +42,18 @@ class RegisterViewController: ViewController {
                     "salario": inputSalario.text,
                     "biografia": inputBio.text]
         
-        let url = "http://localhost:8888/gestion-empleados/public/api/register"
+        let url = "http://192.168.64.3/proyectos/gestion-empleados/public/api/register"
         
         AF.request(url, method: .post, parameters: body, encoding: JSONEncoding.default, headers: nil).responseDecodable(of: Data.self){response in
             self.status = response.value?.status
-            print(response.value?.status)
-            print(response.value?.msg)
+            print("response",response)
+            print("status",response.value?.status)
+            print("msg",response.value?.msg)
             self.msg = response.value?.msg
             self.api_token = response.value?.api_token
             self.rol = response.value?.puesto
             self.id = response.value?.id
-            print(self.id)
+            print("id",self.id)
             self.afterResponse()
         }
         
@@ -86,15 +87,15 @@ class RegisterViewController: ViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "registro_lista"{
             let listaVista = segue.destination as! ListaViewController
-            listaVista.api_token = api_token!
-            listaVista.rol = rol!
-            listaVista.id = id!
+            listaVista.api_token = self.api_token!
+            listaVista.rol = self.rol!
+            listaVista.id = self.id!
         }
         if segue.identifier == "registro_perfil"{
             let listaPerfil = segue.destination as! PerfilViewController
-            listaPerfil.api_token = api_token!
-            listaPerfil.rol = rol!
-            listaPerfil.id = id!
+            listaPerfil.api_token = self.api_token!
+            listaPerfil.rol = self.rol!
+            listaPerfil.id = self.id!
         }
     }
     
