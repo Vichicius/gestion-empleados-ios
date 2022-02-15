@@ -61,22 +61,25 @@ class ListaViewController: UIViewController, UITableViewDelegate, UITableViewDat
         celda.NombreTXT.text = self.usuarios![indexPath.row].nombre
         celda.PuestoTXT.text = self.usuarios![indexPath.row].puesto
         celda.SalarioTXT.text = String(self.usuarios![indexPath.row].salario)
-        
-//        celda.NombreTXT.text = "paco"
-//        celda.PuestoTXT.text = "albañil"
-//        celda.SalarioTXT.text = "9999"
 
         return celda
     }
         
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //segue a perfil
+        id = self.usuarios![indexPath.row].id
+        
+        performSegue(withIdentifier: "lista_perfil", sender: nil)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
         if segue.identifier == "logueado_perfil"{
             let listaPerfil = segue.destination as! PerfilViewController
             listaPerfil.api_token = api_token!
+            listaPerfil.rol = rol!
+            listaPerfil.id = id!
+        }
+        if segue.identifier == "lista_perfil"{
+            let listaPerfil = segue.destination as! PerfilViewController
             listaPerfil.rol = rol!
             listaPerfil.id = id!
         }

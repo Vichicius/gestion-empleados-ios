@@ -24,6 +24,7 @@ class LoginViewController: ViewController {
     var api_token:String?
     var rol:String?
     var id:Int?
+    var defaults = UserDefaults.standard
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
     
@@ -46,6 +47,9 @@ class LoginViewController: ViewController {
             print(response)
             self.msg = response.value?.msg
             self.api_token = response.value?.api_token
+            if response.value?.api_token != nil {
+                self.defaults.set(self.api_token!, forKey: "token")
+            }
             self.rol = response.value?.puesto
             self.id = response.value?.id
             

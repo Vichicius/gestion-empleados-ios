@@ -13,6 +13,7 @@ class PerfilViewController: ViewController {
     var api_token:String = ""
     var rol:String = ""
     var id:Int = 0
+    var defaults = UserDefaults.standard
     
     struct DataResponse: Decodable{
         let id: Int?
@@ -46,7 +47,7 @@ class PerfilViewController: ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("entra al perfil")
-        
+        api_token = defaults.string(forKey: "token")!
         let url = "http://192.168.64.3/proyectos/gestion-empleados/public/api/details"
         let body = ["api_token": api_token, "id": String(id)]
         

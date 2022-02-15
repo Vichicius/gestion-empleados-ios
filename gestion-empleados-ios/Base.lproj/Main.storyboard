@@ -91,7 +91,6 @@
                                             <outlet property="NombreTXT" destination="V1b-xd-FQ0" id="QcJ-OM-EmB"/>
                                             <outlet property="PuestoTXT" destination="lJC-ME-Nth" id="hd1-Nt-BhV"/>
                                             <outlet property="SalarioTXT" destination="mji-mZ-rau" id="gmP-jZ-PMH"/>
-                                            <segue destination="rSU-nB-QhH" kind="show" id="XZI-Sg-AMg"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -117,6 +116,7 @@
                     <navigationItem key="navigationItem" id="cJm-wo-0XC"/>
                     <connections>
                         <outlet property="tablaEmpleados" destination="edy-aJ-gj2" id="ufS-7l-rTX"/>
+                        <segue destination="rSU-nB-QhH" kind="show" identifier="lista_perfil" id="veK-eR-Naf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -509,11 +509,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QFD-kC-6pe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="453.84615384615381" y="305.68720379146919"/>
+            <point key="canvasLocation" x="489" y="367"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="XZI-Sg-AMg"/>
+        <segue reference="veK-eR-Naf"/>
         <segue reference="NzJ-j1-gTe"/>
     </inferredMetricsTieBreakers>
     <resources>
