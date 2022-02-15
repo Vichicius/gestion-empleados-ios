@@ -24,6 +24,7 @@ class ListaViewController: ViewController {
     struct UsuarioR: Encodable, Decodable{
         var usuarios: [Usuario]?
     }
+    
     var usuarios: [Usuario]?
     
     override func viewDidLoad() {
@@ -31,7 +32,7 @@ class ListaViewController: ViewController {
         print("entra a la lista")
         print(rol)
         
-        let url = "http://localhost:8888/gestion-empleados/public/api/list"
+        let url = "http://192.168.64.3/proyectos/gestion-empleados/public/api/list"
         let body = ["api_token": api_token]
         
         //AF.req encoding
