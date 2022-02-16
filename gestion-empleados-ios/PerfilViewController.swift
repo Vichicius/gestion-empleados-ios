@@ -48,7 +48,7 @@ class PerfilViewController: ViewController {
         super.viewDidLoad()
         print("entra al perfil")
         api_token = defaults.string(forKey: "token")!
-        let url = "http://192.168.64.3/proyectos/gestion-empleados/public/api/details"
+        let url = "http://localhost:8888/gestion-empleados/public/api/details"
         let body = ["api_token": api_token, "id": String(id)]
         
         print("body",body)

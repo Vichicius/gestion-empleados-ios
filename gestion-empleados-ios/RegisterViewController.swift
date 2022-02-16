@@ -42,7 +42,7 @@ class RegisterViewController: ViewController {
                     "salario": inputSalario.text,
                     "biografia": inputBio.text]
         
-        let url = "http://192.168.64.3/proyectos/gestion-empleados/public/api/register"
+        let url = "http://localhost:8888/gestion-empleados/public/api/register"
         
         AF.request(url, method: .post, parameters: body, encoding: JSONEncoding.default, headers: nil).responseDecodable(of: Data.self){response in
             self.status = response.value?.status
